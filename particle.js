@@ -1,4 +1,3 @@
-
 class Particle extends VerletParticle2D {
 
   constructor( x,  y) {
@@ -47,6 +46,7 @@ class Particle extends VerletParticle2D {
       for (let s of this.connections) {
         s.remove();   
       }
+    // bloop.play();
     }
   }
 }

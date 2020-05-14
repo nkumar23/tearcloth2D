@@ -24,9 +24,20 @@ let yoff =0;
 let counter = 0;
 let wind;
 
+let song;
+let bloop;
+
+// function preload() {
+//     song = loadSound('jamuary3.mp3');
+//     bloop = loadSound('bloop.mp3');
+    
+// }
+
 function setup() {
   createCanvas(windowWidth, windowHeight); 
+//   song.loop(); 
   physics = new VerletPhysics2D();
+
   
 //add Gravity once 
   let gravity = new Vec2D(0, 1);  
@@ -96,17 +107,10 @@ function draw() {
     s.display();
   }
   
-  // for (let i = 0; i < cols; i++) {
-  //   for (let j = 0; j < rows; j++) {
-  //     // particles[i][j].display();
-  //   }
-  // }
-  
   //add perlin noise color change
   colorChange();
   
-  //console.log(springs);
- // console.log(springs[1]);
+  // logic to remove springs
   for (let i = springs.length-1; i >= 0; i--) {
     if (springs[i].toDelete) {
       springs.splice(i, 1); 
