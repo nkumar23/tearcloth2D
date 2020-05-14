@@ -27,15 +27,16 @@ let wind;
 let song;
 let bloop;
 
-// function preload() {
-//     song = loadSound('jamuary3.mp3');
-//     bloop = loadSound('bloop.mp3');
+function preload() {
+    song = loadSound('jamuary3.mp3');
+    bloop = loadSound('bloop.wav');
     
-// }
+}
 
 function setup() {
   createCanvas(windowWidth, windowHeight); 
-//   song.loop(); 
+  song.loop(); 
+  bloop.amp(.08);
   physics = new VerletPhysics2D();
 
   
